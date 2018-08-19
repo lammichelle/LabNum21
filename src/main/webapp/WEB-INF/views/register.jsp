@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Info</title>
-
-
+<link href = "css/style.css" rel="stylesheet">
 </head>
 
 
@@ -17,37 +16,38 @@
 
 <h3>Please fill the form to register!</h3>
 
-<form name ="regForm" action="adduser"  onsubmit="return validateForm()" method="post">
+<form name ="regForm" action="adduser"  onsubmit="return validateInfo()" method="post">
 
 <!-- One "tab" for each step in the form: -->
 <div class="tab">First Name:
 <!--  <input type = "text" name = "firstName">-->
-  <p><input type = "text" name = "firstName" placeholder="First name..." oninput="firstName" required ></p>
+  <p><input id = "firstName" type = "text" name = "firstName" placeholder = "First Name"></p>
  
 </div>
 
 
 <div class="tab">Last Name:
- <p><input type = "text" name = "lastName" placeholder="Last name..." oninput="this.className = ''" required ></p>
+ <p><input id = "lastName" type = "text" name = "lastName" placeholder = "Last Name" ></p>
 </div>
 
 
 <div class="tab">Email:
-  <p><input type = "text" name = "email" placeholder="E-mail..." oninput="this.className = ''" required></p>
+  <p><input id = "email" type = "text" name = "email" placeholder = "Email" required ></p>
   </div>
   <div class="tab">Phone:
-  <p><input type = "text" name = "phone" placeholder="Phone..." oninput="this.className = ''" required></p>
+  <p><input id = "phone" type = "tel" name = "lastname" placeholder="123-456-7890"
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/></p>
 </div>
 
 
 
 <div class="tab">Password:
   
-<p><input type ="PASSWORD" name = “password” placeholder=“Password...“ required></p>
+<p><input type ="PASSWORD" name = “password” placeholder=“Password...“  onchange = 'check_pass();' required></p>
   
 
 <!-- An element to toggle between password visibility -->
-<input type="checkbox" onclick="myFunction()">Show Password
+<input type="checkbox" onclick="myFunction()"  onchange = 'check_pass();'/>Show Password
   
 </div>
 <input type = "submit" value = "Register">

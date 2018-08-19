@@ -23,7 +23,10 @@ public class HomeController {
 		return new ModelAndView("adduser", "personName", fName);
 	}
 	
-	
+	@RequestMapping("/additem") //url is mostly lower case
+	public String addItem() {
+		return "additem"; 
+	}
 	
 	
 }

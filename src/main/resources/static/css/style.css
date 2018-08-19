@@ -1,1 +1,13 @@
 @charset "UTF-8";
+
+h3{
+	color:blue;
+}
+
+h2{
+	color: pink;
+}
+
+h1 {
+	color: orange;
+}
