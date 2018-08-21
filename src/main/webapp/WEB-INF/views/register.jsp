@@ -16,7 +16,7 @@
 
 <h3>Please fill the form to register!</h3>
 
-<form name ="regForm" action="adduser"  onsubmit="return validateInfo()" method="post">
+<form name ="regForm" action="addnewuser"  onsubmit="return validateInfo()" method="post">
 
 <!-- One "tab" for each step in the form: -->
 <div class="tab">First Name:
@@ -35,22 +35,26 @@
   <p><input id = "email" type = "text" name = "email" placeholder = "Email" required ></p>
   </div>
   <div class="tab">Phone:
-  <p><input id = "phone" type = "tel" name = "lastname" placeholder="123-456-7890"
+  <p><input id = "phone" type = "tel" name = "phone" placeholder="123-456-7890"
            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/></p>
 </div>
 
+<label>Password:
+  <p><input name="password" id="password" type="PASSWORD" onkeyup = 'check();' /></p>
+</label>
+<br>
+<label>Confirm password:
+  <p><input type="password" name="confirmPassword" id="confirmPassword"  onkeyup='check();' /> 
+  <span id='message'></span></p>
+</label>
 
 
-<div class="tab">Password:
-  
-<p><input type ="PASSWORD" name = “password” placeholder=“Password...“  onchange = 'check_pass();' required></p>
-  
 
 <!-- An element to toggle between password visibility -->
 <input type="checkbox" onclick="myFunction()"  onchange = 'check_pass();'/>Show Password
   
 </div>
-<input type = "submit" value = "Register">
+<input type = "submit" value = "Register"></a>
 
 
 <!-- Circles which indicates the steps of the form: -->
